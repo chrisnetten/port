@@ -15,14 +15,15 @@
      <script src="/Scripts/jquery-2.2.4.min.js"></script>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="/Content/style.css" rel="stylesheet" />
-    <script src="/Scripts/script.js"></script>
+    <link href="/Content/animate.min.css" rel="stylesheet" />
+       <script src="~/Scripts/wow.js"></script>
+                <script src="~/Scripts/script.js"></script>
    
 </head>
 <body>
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
                 <%--Framework Scripts--%>
                 <asp:ScriptReference Name="MsAjaxBundle" />
                 <asp:ScriptReference Name="jquery" />
@@ -39,49 +40,79 @@
                 <asp:ScriptReference Name="WebFormsBundle" />
                 <%--Site Scripts--%>
             </Scripts>
+
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
+     
+
+
+          <nav id="colorNav" class="colorNav">
+            <ul>
+            
+                <li class="yellow" data-wow-duration="2s">
+                        HOME
+                    <a href="#" class="fa fa-home"></a>
+                    <ul>
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+
+                        <!-- More dropdown options -->
                     </ul>
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Register">Register</a></li>
-                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
-                                <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                </li>
-                            </ul>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
-                </div>
-            </div>
-        </div>
+                </li>
+
+                <!-- More menu items -->
+
+                <li class="yellow" data-wow-duration="2s">
+                    ABOUT
+                                        <a href="#" class="fa fa-home"></a>
+
+                    <ul>
+                        <li><a runat="server" href="~/About">About</a></li>
+                        <!-- More dropdown options -->
+                    </ul>
+                </li>
+
+                <li class="yellow" data-wow-duration="2s">
+                    CONTACT
+                    <a href="#" class="fa fa-"></a>
+                    <ul>
+                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <!-- More dropdown options -->
+                    </ul>
+                </li>
+
+              
+            </ul>
+        </nav>
+
+
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+            <footer >
+              
+<div class="container-f">
+<img style="height: 40px; width: 100%;" src="/images/seperator.png" />
+    <div class = "footer">
+    <div style="height: 50px;"></div>
+                    <ul style="padding-left: -20px;">
+                  
+                         <li>
+                            <a runat="server" href="~/about" ><img src="/images/footer/services.png"/></a>
+                        </li>
+                       
+                         <li>
+                            <a runat="server" href="~/contact" ><img src="/images/footer/contact.png"/></a>
+                        </li>
+                         <br>
+                          <li>
+                          <img style="max-width:100%;"src="/images/footer/logo-bottom.png"/>
+                        </li>
+                        </ul>
+                         <br>
+    </div>
+</div>
             </footer>
         </div>
     </form>

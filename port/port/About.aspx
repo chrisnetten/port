@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="port.About" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <div style="height: 100px;"></div>
+
            <section id="services" class="jumbotron">
 
 
@@ -49,8 +51,8 @@
                         </div>
                         <div class="skillInfo">
 
-                            <p> MySQL, MongoDB, Java, jQuery, Javascript Vanilla, Git, NPM Modules, CSS, C#, C++, Android SDK,
-                                Bootstrap, HTML5, PHP, Photoshop</p>
+                            <p> MySQL, MongoDB, Java, jQuery, Javascript Vanilla, Git, CSS, C#, C++, Android SDK,
+                                 HTML5, PHP, Photoshop, ASP.Net</p>
                             <br>
                             <p>The More I Learn The More I Must Know</p>
                         </div>
