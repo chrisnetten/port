@@ -1,5 +1,4 @@
-﻿body {
-}
+﻿
 /* Portfolio Site */
 /* Author:Christopher */
 /* This is my style.css for all my pages */
@@ -9,7 +8,9 @@
     height: 5%;
 }
 
-
+#ctl01 {
+    width: 100% !important;
+}
 
 
 /* ***Mobile CSS*** */
