@@ -10,7 +10,7 @@
 
 
         <section id="about">
-<img id="earth" src="/images/earth.png"/>                </div>
+<img id="earth" src="/images/earth.png"/>               
 
 
             <div class="row">
